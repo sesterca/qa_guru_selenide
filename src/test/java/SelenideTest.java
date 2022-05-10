@@ -26,6 +26,7 @@ public class SelenideTest {
         //Перейдите в раздел Wiki проекта
         $("#wiki-tab").click();
         //Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
+        $(withTagAndText("button", "more")).click();
         $(byTagAndText("a","Soft assertions")).click();
         //Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
         SelenideElement element = $(withTagAndText("h4", "JUnit5")).sibling(0).find("div>pre");
